@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+// Function to print formatted name
+void printName(char name[]) {
+    char first[20], middle[20], last[20];
+    int count;
+
+    // Count words using sscanf
+    count = sscanf(name, "%s %s %s", first, middle, last);
+
+    if (count == 3) {
+        printf("%c. %c. %s\n", first[0], middle[0], last);
+    } else if (count == 2) {
+        printf("%c. %s\n", first[0], middle);
+    }
+}
+
+int main() {
+    char name[50];
+
+    printf("Enter full name: ");
+    fgets(name, sizeof(name), stdin);
+
+    printName(name);
+
+    return 0;
+}
