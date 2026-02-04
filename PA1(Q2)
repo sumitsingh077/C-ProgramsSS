@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+float costPrice(float totalSP, float profit);
+
+int main() {
+    float sp, profit;
+    printf("Enter total selling price and profit: ");
+    scanf("%f %f", &sp, &profit);
+
+    printf("Cost price of one item = %.2f\n", costPrice(sp, profit));
+    return 0;
+}
+
+float costPrice(float totalSP, float profit) {
+    float totalCP = totalSP - profit;
+    return totalCP / 15;
+}
