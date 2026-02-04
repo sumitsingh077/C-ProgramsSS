@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void reverseString(char str[], int index);
+
+int main() {
+    char str[50];
+    printf("Enter string: ");
+    scanf("%s", str);
+
+    printf("Reversed string: ");
+    reverseString(str, 0);
+    return 0;
+}
+
+void reverseString(char str[], int index) {
+    if (str[index] == '\0')
+        return;
+    reverseString(str, index + 1);
+    printf("%c", str[index]);
+}
