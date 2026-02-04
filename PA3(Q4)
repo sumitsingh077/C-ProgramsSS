@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int extractYear(long roll);
+
+int main() {
+    long roll;
+    printf("Enter roll number: ");
+    scanf("%ld", &roll);
+
+    printf("Year of admission: %d\n", extractYear(roll));
+    return 0;
+}
+
+int extractYear(long roll) {
+    return roll / 10000;   // removes last 4 digits
+}
