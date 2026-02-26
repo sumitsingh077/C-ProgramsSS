@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+enum DataType { INT, FLOAT, CHAR };
+
+struct Data
+{
+    enum DataType type;
+    union
+    {
+        int i;
+        float f;
+        char c;
+    } value;
+};
+
+int main()
+{
+    struct Data d;
+
+    d.type = INT;
+    d.value.i = 10;
+    printf("Integer: %d\n", d.value.i);
+
+    d.type = FLOAT;
+    d.value.f = 5.5;
+    printf("Float: %.2f\n", d.value.f);
+
+    d.type = CHAR;
+    d.value.c = 'A';
+    printf("Character: %c\n", d.value.c);
+
+    return 0;
+}
