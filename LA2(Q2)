@@ -1,19 +1,22 @@
 #include <stdio.h>
 
-// Function to increase value using call by reference
-void increase(int *x) {
-    *x = *x + 1;
+// Function to swap two numbers using call by reference
+void swap(int *a, int *b) {
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int main() {
-    int num;
+    int x = 10, y = 20;
 
-    printf("Enter a number: ");
-    scanf("%d", &num);
+    printf("Before swapping: x = %d, y = %d\n", x, y);
 
-    increase(&num);   // Call by reference
+    // Passing addresses (reference)
+    swap(&x, &y);
 
-    printf("Value after increase: %d\n", num);
+    printf("After swapping: x = %d, y = %d\n", x, y);
 
     return 0;
 }
