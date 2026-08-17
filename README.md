@@ -1,6 +1,6 @@
 # C Programming Practice 💻
 
-A collection of C programming programs created while learning and practicing core programming concepts.
+A collection of C programming practice programs covering functions, arrays, pointers, recursion, structures, and dynamic memory allocation.
 
 ## 📚 Topics Covered
 
@@ -51,7 +51,7 @@ This repository documents my learning journey in C programming and helps me stre
 
 **Sumit Kumar**
 
-B.Tech Computer Science Student  
+B.Tech Computer Science & Engineering Student  
 Sharda University
 
 ---
